@@ -10,96 +10,114 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <nav class="nav">
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
         <a class="brand" href="#top">IDK Math</a>
-        <div class="nav-links">
-          <a href="#games">Games</a>
-          <a href="#features">Features</a>
-          <a href="#about">About</a>
-        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#top" class="sidebar-link active" data-section="top">
+          <span class="icon">🏠</span> Home
+        </a>
+        <a href="#games" class="sidebar-link" data-section="games">
+          <span class="icon">🎮</span> Maths
+        </a>
+        <a href="#features" class="sidebar-link" data-section="features">
+          <span class="icon">🔍</span> Features
+        </a>
+        <a href="#about" class="sidebar-link" data-section="about">
+          <span class="icon">ℹ️</span> About
+        </a>
       </nav>
+      <div class="sidebar-footer">
+        <p class="eyebrow">"rate da site pls"</p>
+      </div>
+    </aside>
 
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Browser Games</p>
-          <h1>Launch your games directly from one clean hub.</h1>
-          <p class="lead">Your uploaded HTML game files are now organized into a searchable grid so people can find a title fast and open it in one click.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#games">Browse Games</a>
-            <a class="button button-secondary" href="#about">How It Works</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <span>Local files</span>
-              <p>Each card opens a game file stored inside your project folder.</p>
+    <div class="page-shell">
+      <div id="gameView" class="section-content">
+        <iframe id="gameFrame" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <header class="site-header section-content active" id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Math stuff</p>
+            <h1>idk.math</h1>
+            <p class="lead">"rate da site pls"</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#games">Browse Maths</a>
+              <a class="button button-secondary" href="#about">How It Works</a>
             </div>
-            <div class="stat">
-              <span>Quick filtering</span>
-              <p>Search by name or narrow the grid by category.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span>Local files</span>
+                <p>Each game is a file in the site</p>
+              </div>
+              <div class="stat">
+                <span>Quick filtering</span>
+                <p>Search by name or narrow the grid by category.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <aside class="hero-panel">
-          <p class="panel-label">Current Setup</p>
-          <ul class="stack-list">
-            <li><strong>Standalone HTML games</strong> load directly in the browser</li>
-            <li><strong>Search input</strong> filters titles as you type</li>
-            <li><strong>Category menu</strong> groups games by type</li>
-            <li><strong>Expandable grid</strong> makes it easy to add more files later</li>
-          </ul>
-        </aside>
-      </section>
-    </header>
+          <aside class="hero-panel">
+            <p class="panel-label">Current Setup</p>
+            <ul class="stack-list">
+              <li><strong>Fast gxmes</strong> that load directly in the browser</li>
+              <li><strong>Search Bar!!!</strong> Filters titles as you type</li>
+              <li><strong>Category menu</strong> groups Gxmes by type</li>
+            </ul>
+          </aside>
+        </section>
+      </header>
 
-    <main>
-      <section class="toolbar" id="features">
-        <div class="toolbar-copy">
-          <p class="section-label">Find A Game</p>
-          <h2>Search and filter your uploaded library</h2>
-          <p>Use the controls to jump straight to a game by name or browse by category.</p>
-        </div>
-        <div class="controls">
-          <label class="control">
-            <span>Search</span>
-            <input id="searchInput" type="search" placeholder="Search games">
-          </label>
-          <label class="control">
-            <span>Category</span>
-            <select id="categoryFilter">
-              <option value="all">All categories</option>
-            </select>
-          </label>
-        </div>
-      </section>
+      <main>
+        <section class="toolbar section-content" id="features">
+          <div class="toolbar-copy">
+            <p class="section-label">Find Maths</p>
+            <h2>Search and filter your uploaded library</h2>
+            <p>Use the controls to jump straight to a gxme by name or browse by category.</p>
+          </div>
+          <div class="controls">
+            <label class="control">
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Search Gxmes">
+            </label>
+            <label class="control">
+              <span>Category</span>
+              <select id="categoryFilter">
+                <option value="all">All categories</option>
+              </select>
+            </label>
+          </div>
+        </section>
 
-      <section class="games-section" id="games">
-        <div class="section-heading">
+        <section class="math-section section-content" id="games">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Maths Library</p>
+              <h2>Available Maths</h2>
+            </div>
+            <p class="results-count" id="resultsCount">Loading Maths...</p>
+          </div>
+          <div class="math-grid" id="gamesGrid"></div>
+        </section>
+
+        <section class="about section-content" id="about">
           <div>
-            <p class="section-label">Game Library</p>
-            <h2>Available games</h2>
+            <p class="section-label">About</p>
+            <h2>Simple file-based Maths hosting</h2>
+            <p>This site reads from a hand-built list of your local Maths files, which keeps the setup lightweight and easy to maintain while you keep adding more Maths.</p>
           </div>
-          <p class="results-count" id="resultsCount">Loading games...</p>
-        </div>
-        <div class="games-grid" id="gamesGrid"></div>
-      </section>
-
-      <section class="about" id="about">
-        <div>
-          <p class="section-label">About</p>
-          <h2>Simple file-based game hosting</h2>
-          <p>This site reads from a hand-built list of your local game files, which keeps the setup lightweight and easy to maintain while you keep adding more games.</p>
-        </div>
-        <ul class="about-list">
-          <li>No backend is needed for the current setup</li>
-          <li>Games open from the `Video Games` folder</li>
-          <li>The grid can be expanded with more entries anytime</li>
-          <li>The same UI works on desktop and mobile</li>
-        </ul>
-      </section>
-    </main>
+          <ul class="about-list">
+            <li>No backend is needed for the current setup (btw that's called a static site)</li>
+            <li>Maths open from the `Maths stuff` folder</li>
+            <li>The same UI works on desktop and mobile btw</li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </div>
 
   <script src="script.js"></script>
