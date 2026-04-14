@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>idk.math — Home</title>
+  <title>idk.math — About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
@@ -19,13 +19,13 @@
     </div>
     <nav class="sidebar-nav">
       <div class="nav-section-title">Navigation</div>
-      <a class="nav-item active" href="index.html">
+      <a class="nav-item" href="index.html">
         <span class="icon">🏠</span> Home
       </a>
       <a class="nav-item" href="games.html">
         <span class="icon">🎮</span> Games
       </a>
-      <a class="nav-item" href="about.html">
+      <a class="nav-item active" href="about.html">
         <span class="icon">ℹ️</span> About
       </a>
       <div class="nav-section-title">My Games</div>
@@ -48,43 +48,39 @@
 
   <div class="main-column">
     <nav class="mobile-nav">
-      <a class="nav-item active" href="index.html">🏠 Home</a>
+      <a class="nav-item" href="index.html">🏠 Home</a>
       <a class="nav-item" href="games.html">🎮 Games</a>
-      <a class="nav-item" href="about.html">ℹ️ About</a>
+      <a class="nav-item active" href="about.html">ℹ️ About</a>
     </nav>
 
     <div class="page-shell">
-      <header class="site-header">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Math stuff</p>
-            <h1>idk.math</h1>
-            <p class="lead">"rate da site pls"</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="games.html">Browse Games</a>
-              <a class="button button-secondary" href="about.html">How It Works</a>
-            </div>
-            <div class="hero-stats">
-              <div class="stat">
-                <span>Local files</span>
-                <p>Each game is a file in the site</p>
-              </div>
-              <div class="stat">
-                <span>Quick filtering</span>
-                <p>Search by name or narrow by category.</p>
-              </div>
-            </div>
+      <section class="about">
+        <div>
+          <p class="section-label">About</p>
+          <h2>Simple file-based game hosting</h2>
+          <p>
+            This site reads from a hand-built list of local game files, keeping the setup
+            lightweight and easy to maintain. No backend, no build step — just HTML files
+            served directly from the <code>Maths stuff</code> folder.
+          </p>
+          <p>
+            Games are embedded in an iframe so you never leave the page. Use the sidebar
+            category links to jump straight to the type of game you want, or use the search
+            bar on the Games page to find something specific.
+          </p>
+          <div class="hero-actions" style="margin-top:1.5rem;">
+            <a class="button button-primary" href="games.html">Browse Games</a>
+            <a class="button button-secondary" href="index.html">Back to Home</a>
           </div>
-          <aside class="hero-panel">
-            <p class="panel-label">Current Setup</p>
-            <ul class="stack-list">
-              <li><strong>Fast games</strong> that load directly in the browser</li>
-              <li><strong>Search Bar!!!</strong> Filters titles as you type</li>
-              <li><strong>Category menu</strong> groups games by type</li>
-            </ul>
-          </aside>
-        </section>
-      </header>
+        </div>
+        <ul class="about-list">
+          <li>No backend needed — it's a static site</li>
+          <li>Games open from the <code>Maths stuff</code> folder</li>
+          <li>Works on desktop and mobile</li>
+          <li>Sidebar category links filter games instantly</li>
+          <li>Each game loads in a full-screen iframe</li>
+        </ul>
+      </section>
     </div>
   </div>
 

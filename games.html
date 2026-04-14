@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idk.math — Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-icon">M</div>
+            <span class="brand-text">IDK Math</span>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section-title">Navigation</div>
+            <a class="nav-item" href="index.html">
+                <span class="icon">🏠</span> Home
+            </a>
+            <a class="nav-item active" href="games.html">
+                <span class="icon">🎮</span> Games
+            </a>
+            <a class="nav-item" href="about.html">
+                <span class="icon">ℹ️</span> About
+            </a>
+            <div class="nav-section-title">My Games</div>
+            <a class="nav-item" href="games.html?category=Action" data-filter="Action">
+                <span class="class-dot dot-action"></span> Action
+            </a>
+            <a class="nav-item" href="games.html?category=Sports" data-filter="Sports">
+                <span class="class-dot dot-sports"></span> Sports
+            </a>
+            <a class="nav-item" href="games.html?category=Adventure" data-filter="Adventure">
+                <span class="class-dot dot-adventure"></span> Adventure
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="btn-signout" onclick="alert('Nothing to sign out of 😄')">
+                <span>↩</span> Sign Out
+            </button>
+        </div>
+    </aside>
+
+    <div class="main-column">
+        <nav class="mobile-nav">
+            <a class="nav-item" href="index.html">🏠 Home</a>
+            <a class="nav-item active" href="games.html">🎮 Games</a>
+            <a class="nav-item" href="about.html">ℹ️ About</a>
+        </nav>
+
+        <div class="page-shell">
+
+            <!-- Game iframe viewer (hidden until a game is launched) -->
+            <div id="gameView" style="display:none;">
+                <div class="game-view-header">
+                    <span id="gameTitle" class="game-view-title"></span>
+                    <div class="game-view-actions">
+                        <button id="enterFullscreenButton" class="btn-game-control" type="button" onclick="enterFullscreen()">⛶ Fullscreen</button>
+                        <button id="exitFullscreenButton" class="btn-game-control" type="button" onclick="exitFullscreen()" hidden>🗕 Minimize</button>
+                        <button class="btn-close-game" type="button" onclick="closeGame()">✕ Close</button>
+                    </div>
+                </div>
+                <iframe id="gameFrame" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Search toolbar -->
+            <section class="toolbar">
+                <div class="toolbar-copy">
+                    <p class="section-label">Find Games</p>
+                    <h2>Search and filter your library</h2>
+                    <p>Use the controls to jump straight to a game by name or browse by category.</p>
+                </div>
+                <div class="controls">
+                    <label class="control">
+                        <span>Search</span>
+                        <input id="searchInput" type="search" placeholder="Search Games">
+                    </label>
+                    <label class="control">
+                        <span>Category</span>
+                        <select id="categoryFilter">
+                            <option value="all">All categories</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Games grid -->
+            <section class="math-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Games Library</p>
+                        <h2>Available Games</h2>
+                    </div>
+                    <p class="results-count" id="resultsCount">Loading...</p>
+                </div>
+                <div class="math-grid" id="gamesGrid"></div>
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="games.js"></script>
+</body>
+</html>
+ 
