@@ -12,6 +12,8 @@
 <body>
 <div class="app-container">
 
+  <button class="hub-trigger" onclick="toggleHub()">M</button>
+
   <aside class="sidebar">
     <div class="sidebar-header">
       <div class="logo-icon">M</div>
@@ -23,10 +25,10 @@
         <span class="icon">🏠</span> Home
       </a>
       <a class="nav-item" href="games.html">
-        <span class="icon">🎮</span> Games
+        <span class="icon">🎮</span> Browse Games
       </a>
       <a class="nav-item" href="about.html">
-        <span class="icon">ℹ️</span> About
+        <span class="icon">ℹ️</span> How It Works
       </a>
       <div class="nav-section-title">My Games</div>
       <a class="nav-item" href="games.html?category=Action">
@@ -57,31 +59,66 @@
       <header class="site-header">
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Math stuff</p>
+            <div class="hero-chip-row">
+              <span class="hero-chip">Static site</span>
+              <span class="hero-chip">Local games</span>
+              <span class="hero-chip">Instant launch</span>
+            </div>
+            <p class="eyebrow">Math stuff portal</p>
             <h1>idk.math</h1>
-            <p class="lead">"rate da site pls"</p>
+            <p class="lead">A glowy one-click shell for random browser games, fast launches, and zero extra setup.</p>
+            <a class="hero-search" href="games.html">
+              <span class="hero-search-label">Quick launch</span>
+              <span class="hero-search-text">Search the library, pick a category, and open a game</span>
+              <span class="hero-search-arrow">→</span>
+            </a>
             <div class="hero-actions">
               <a class="button button-primary" href="games.html">Browse Games</a>
               <a class="button button-secondary" href="about.html">How It Works</a>
             </div>
             <div class="hero-stats">
               <div class="stat">
-                <span>Local files</span>
-                <p>Each game is a file in the site</p>
+                <span>Direct file launch</span>
+                <p>Each game opens from the local site folder without a backend.</p>
               </div>
               <div class="stat">
                 <span>Quick filtering</span>
-                <p>Search by name or narrow by category.</p>
+                <p>Search by title or jump straight into Action, Sports, or Adventure.</p>
+              </div>
+              <div class="stat">
+                <span>Framed player</span>
+                <p>Games stay inside the site shell with fullscreen support when needed.</p>
               </div>
             </div>
           </div>
           <aside class="hero-panel">
-            <p class="panel-label">Current Setup</p>
-            <ul class="stack-list">
-              <li><strong>Fast games</strong> that load directly in the browser</li>
-              <li><strong>Search Bar!!!</strong> Filters titles as you type</li>
-              <li><strong>Category menu</strong> groups games by type</li>
-            </ul>
+            <p class="panel-label">Portal Preview</p>
+            <div class="panel-window">
+              <div class="panel-window-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="panel-screen">
+                <div class="panel-rail">
+                  <span class="panel-rail-item active"></span>
+                  <span class="panel-rail-item"></span>
+                  <span class="panel-rail-item"></span>
+                  <span class="panel-rail-item"></span>
+                </div>
+                <div class="panel-content">
+                  <div class="panel-display">
+                    <strong>Uni-shell vibe</strong>
+                    <p>Floating nav, glass cards, big center stage.</p>
+                  </div>
+                  <ul class="stack-list">
+                    <li><strong>Search-first flow</strong> for fast game picks</li>
+                    <li><strong>Category rail</strong> with obvious active states</li>
+                    <li><strong>Embedded player</strong> that feels like an app window</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </aside>
         </section>
       </header>
@@ -89,5 +126,7 @@
   </div>
 
 </div>
+<script src="particles.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
