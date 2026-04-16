@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sharpness.math — Proxy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .proxy-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .proxy-input-wrapper {
+      position: relative;
+      margin-top: 2rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .proxy-input {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1.1rem;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .proxy-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(182, 120, 255, 0.15);
+    }
+    .proxy-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: none;
+      border-radius: 12px;
+      padding: 0 2rem;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .proxy-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .proxy-frame-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      z-index: 2000;
+      flex-direction: column;
+    }
+    .proxy-header {
+      padding: 0.75rem 1.5rem;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .proxy-frame {
+      flex: 1;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    .close-proxy {
+      background: var(--panel-strong);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+<div class="app-container">
+
+  <button class="hub-trigger" onclick="toggleHub()">S</button>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-icon">S</div>
+      <span class="brand-text">Sharpness Math</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Navigation</div>
+      <a class="nav-item" href="index.html">
+        <span class="icon">🏠</span> Home
+      </a>
+      <a class="nav-item" href="games.html">
+        <span class="icon">🎮</span> Browse Games
+      </a>
+      <a class="nav-item active" href="proxy.html">
+        <span class="icon">🌐</span> Proxy
+      </a>
+      <a class="nav-item" href="about.html">
+        <span class="icon">ℹ️</span> About
+      </a>
+      <a class="nav-item" href="settings.html">
+        <span class="icon">⚙️</span> Settings
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="btn-signout" onclick="alert('Nothing to sign out of 😄')">
+        <span>↩</span> Sign Out
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-column">
+    <nav class="mobile-nav">
+      <a class="nav-item" href="index.html">🏠 Home</a>
+      <a class="nav-item" href="games.html">🎮 Games</a>
+      <a class="nav-item active" href="proxy.html">🌐 Proxy</a>
+      <a class="nav-item" href="about.html">ℹ️ About</a>
+      <a class="nav-item" href="settings.html">⚙️ Settings</a>
+    </nav>
+
+    <div class="page-shell">
+      <div class="proxy-container">
+        <p class="section-label">Web Proxy</p>
+        <h1>Scramjet Proxy</h1>
+        <p class="lead">Bypass restrictions and browse the web freely using Scramjet.</p>
+        
+        <form id="proxyForm" class="proxy-input-wrapper">
+          <input type="text" id="proxyInput" class="proxy-input" placeholder="Enter URL or search query..." required>
+          <button type="submit" class="proxy-btn">Go</button>
+        </form>
+        
+        <div style="margin-top: 3rem; text-align: left; background: var(--bg-card); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+          <h3 style="margin-top: 0;">How to use</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            1. Type a URL (e.g., <code>google.com</code>) or a search term in the box above.<br>
+            2. Press Enter or click "Go".<br>
+            3. The site will load inside a secure frame.
+          </p>
+          <div style="margin-top: 1rem; padding: 1rem; background: rgba(182, 120, 255, 0.1); border-left: 4px solid var(--accent); border-radius: 4px;">
+            <strong>Note:</strong> This requires a Scramjet backend (Bare server) to be configured. 
+            If you are self-hosting, ensure your <code>sw.js</code> and Bare server URL are correctly set.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="proxyView" class="proxy-frame-container">
+    <header class="proxy-header">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-family: 'Baloo 2'; font-size: 1.2rem; color: var(--accent);">Sharpness Proxy</span>
+        <span id="proxyDisplayUrl" style="font-size: 0.9rem; color: var(--text-muted);"></span>
+      </div>
+      <button class="close-proxy" onclick="closeProxy()">Exit Proxy</button>
+    </header>
+    <iframe id="proxyFrame" class="proxy-frame"></iframe>
+  </div>
+
+</div>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<!-- Scramjet and BareMux scripts should be loaded here -->
+<!-- <script src="/scram/scramjet.controller.js"></script> -->
+<!-- <script src="/baremux/index.js"></script> -->
+
+<script>
+  const proxyForm = document.getElementById('proxyForm');
+  const proxyInput = document.getElementById('proxyInput');
+  const proxyView = document.getElementById('proxyView');
+  const proxyFrame = document.getElementById('proxyFrame');
+  const proxyDisplayUrl = document.getElementById('proxyDisplayUrl');
+
+  proxyForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const url = proxyInput.value.trim();
+    if (!url) return;
+
+    // Logic to encode URL for Scramjet
+    // For now, we'll just show the frame. 
+    // In a real implementation, you'd use: window.location.href = __scramjet_config.prefix + encodeUrl(url);
+    
+    // Placeholder for demonstration
+    proxyDisplayUrl.textContent = url;
+    proxyView.style.display = 'flex';
+    
+    // This is where Scramjet would take over
+    // proxyFrame.src = "/scram/service/" + btoa(url); 
+    
+    alert("Scramjet integration requires a backend server and the '@mercuryworkshop/scramjet' files. \n\nSee the documentation for setting up your Bare server.");
+  });
+
+  function closeProxy() {
+    proxyView.style.display = 'none';
+    proxyFrame.src = 'about:blank';
+  }
+</script>
+</body>
+</html>
