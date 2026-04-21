@@ -21,11 +21,53 @@ const games = [
     href: "Maths%20stuff/Brotato.html"
   },
   {
+    title: "Five Nights at Freddy's",
+    category: "Action",
+    status: "Ready to play",
+    description: "The original survive-the-night horror game. Watch the cameras and manage the power.",
+    href: "Maths%20stuff/clFNAF.html"
+  },
+  {
+    title: "Five Nights at Freddy's 2",
+    category: "Action",
+    status: "Ready to play",
+    description: "More animatronics, no doors, just a mask and a flashlight. Harder than the first.",
+    href: "Maths%20stuff/Five%20Nights%20at%20Freddy's%202.html"
+  },
+  {
+    title: "Five Nights at Freddy's 3",
+    category: "Action",
+    status: "Ready to play",
+    description: "One animatronic, one vent system, and a lot of audio lures. Good luck.",
+    href: "Maths%20stuff/clFNAF3.html"
+  },
+  {
+    title: "Five Nights at Freddy's 4",
+    category: "Action",
+    status: "Ready to play",
+    description: "No cameras — just doors, a flashlight, and sounds in the dark.",
+    href: "Maths%20stuff/clFNAF4.html"
+  },
+  {
+    title: "Five Nights at Epstein's",
+    category: "Action",
+    status: "Ready to play",
+    description: "A fan-made FNAF-style horror game with a very different cast of characters.",
+    href: "Maths%20stuff/Five%20Nights%20at%20Epstein's.html"
+  },
+  {
     title: "Hollow Knight",
     category: "Adventure",
     status: "Ready to play",
     description: "An exploration-heavy action adventure with platforming and combat.",
     href: "Maths%20stuff/Hollow%20Knight.html"
+  },
+  {
+    title: "Retro Bowl",
+    category: "Sports",
+    status: "Ready to play",
+    description: "Old-school American football management and play-calling in a retro package.",
+    href: "Maths%20stuff/Retro%20Bowl.html"
   },
   {
     title: "Soccer Random",
@@ -101,7 +143,7 @@ function renderGames() {
       <p class="math-description">${g.description}</p>
       <div class="math-actions">
         <button class="card-button primary" onclick="launchGame('${g.href}','${g.title}')">Play now</button>
-        <span class="card-button">${decodeURIComponent(g.href).replace('Maths stuff/', '')}</span>
+        <a class="card-button" href="${g.href}" download title="Download game file">⬇ Download</a>
       </div>
     </article>
   `).join("");
