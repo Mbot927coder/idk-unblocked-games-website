@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sharpness.math — Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,15 +33,18 @@
             <a class="nav-item" href="settings.html">
                 <span class="icon">⚙️</span> Settings
             </a>
-            <div class="nav-section-title">My Games</div>
+            <div class="nav-section-title">Categories</div>
             <a class="nav-item" href="games.html?category=Action" data-filter="Action">
                 <span class="class-dot dot-action"></span> Action
             </a>
-            <a class="nav-item" href="games.html?category=Sports" data-filter="Sports">
-                <span class="class-dot dot-sports"></span> Sports
-            </a>
             <a class="nav-item" href="games.html?category=Adventure" data-filter="Adventure">
                 <span class="class-dot dot-adventure"></span> Adventure
+            </a>
+            <a class="nav-item" href="games.html?category=Racing" data-filter="Racing">
+                <span class="class-dot dot-racing"></span> Racing
+            </a>
+            <a class="nav-item" href="games.html?category=Sports" data-filter="Sports">
+                <span class="class-dot dot-sports"></span> Sports
             </a>
         </nav>
         <div class="sidebar-footer">
@@ -61,7 +64,7 @@
 
         <div class="page-shell">
 
-            <!-- Game iframe viewer (hidden until a game is launched) -->
+            <!-- Game iframe viewer -->
             <div id="gameView" style="display:none;">
                 <div class="game-view-header">
                     <span id="gameTitle" class="game-view-title"></span>
@@ -78,16 +81,16 @@
             <section class="toolbar">
                 <div class="toolbar-copy">
                     <p class="section-label">Find Games</p>
-                    <h2>Search and filter your library</h2>
+                    <h2>Search & Filter</h2>
                     <p>Use the controls to jump straight to a game by name or browse by category.</p>
                 </div>
                 <div class="controls">
                     <label class="control">
-                        <span>Search</span>
-                        <input id="searchInput" type="search" placeholder="Search Games">
+                        <span>🔍 Search</span>
+                        <input id="searchInput" type="search" placeholder="Search 15 games..." autocomplete="off">
                     </label>
                     <label class="control">
-                        <span>Category</span>
+                        <span>📂 Category</span>
                         <select id="categoryFilter">
                             <option value="all">All categories</option>
                         </select>
@@ -95,16 +98,33 @@
                 </div>
             </section>
 
+            <!-- Sort bar -->
+            <div class="sort-bar" style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+                <span style="color:var(--text-muted);font-size:0.8rem;font-weight:600;">Sort:</span>
+                <button class="sort-btn active" data-sort="default">Default</button>
+                <button class="sort-btn" data-sort="az">A → Z</button>
+                <button class="sort-btn" data-sort="za">Z → A</button>
+                <button class="sort-btn" data-sort="fav">Favorites</button>
+            </div>
+
             <!-- Games grid -->
             <section class="math-section">
                 <div class="section-heading">
                     <div>
-                        <p class="section-label">Games Library</p>
-                        <h2>Available Games</h2>
+                        <p class="section-label">Library</p>
+                        <h2>All Games</h2>
                     </div>
                     <p class="results-count" id="resultsCount">Loading...</p>
                 </div>
-                <div class="math-grid" id="gamesGrid"></div>
+                <div class="math-grid" id="gamesGrid">
+                    <!-- Skeleton loading -->
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                    <div class="skeleton-card"><div class="skeleton skeleton-thumb"></div><div class="skeleton skeleton-line short"></div><div class="skeleton skeleton-line medium"></div></div>
+                </div>
             </section>
 
         </div>
@@ -113,8 +133,7 @@
 </div>
 
 <script src="particles.js"></script>
-<script src="app.js"></script>
 <script src="games.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
- 

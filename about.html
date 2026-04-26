@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sharpness.math — About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,15 +33,18 @@
       <a class="nav-item" href="settings.html">
         <span class="icon">⚙️</span> Settings
       </a>
-      <div class="nav-section-title">My Games</div>
+      <div class="nav-section-title">Categories</div>
       <a class="nav-item" href="games.html?category=Action" data-filter="Action">
         <span class="class-dot dot-action"></span> Action
       </a>
-      <a class="nav-item" href="games.html?category=Sports" data-filter="Sports">
-        <span class="class-dot dot-sports"></span> Sports
-      </a>
       <a class="nav-item" href="games.html?category=Adventure" data-filter="Adventure">
         <span class="class-dot dot-adventure"></span> Adventure
+      </a>
+      <a class="nav-item" href="games.html?category=Racing" data-filter="Racing">
+        <span class="class-dot dot-racing"></span> Racing
+      </a>
+      <a class="nav-item" href="games.html?category=Sports" data-filter="Sports">
+        <span class="class-dot dot-sports"></span> Sports
       </a>
     </nav>
     <div class="sidebar-footer">
@@ -63,16 +66,16 @@
       <section class="about">
         <div>
           <p class="section-label">About</p>
-          <h2>Simple file-based game hosting</h2>
+          <h2>Static game hosting, kept simple</h2>
           <p>
-            This site reads from a hand-built list of local game files, keeping the setup
-            lightweight and easy to maintain. No backend, no build step — just HTML files
-            served directly from the <code>Maths stuff</code> folder.
+            sharpness.math is a static launcher for verified local HTML game files. The site reads from
+            <code>games.js</code>, embeds games inside the Games page viewer, and stores favorites,
+            recents, theme, and particle settings in your browser.
           </p>
           <p>
-            Games are embedded in an iframe so you never leave the page. Use the sidebar
-            category links to jump straight to the type of game you want, or use the search
-            bar on the Games page to find something specific.
+            The current library includes 15 working games across action, adventure, racing, and sports.
+            Broken entries have been removed so the catalog only points at files that actually exist in
+            <code>Maths stuff</code>.
           </p>
           <div class="hero-actions" style="margin-top:1.5rem;">
             <a class="button button-primary" href="games.html">Browse Games</a>
@@ -80,31 +83,31 @@
           </div>
         </div>
         <ul class="about-list">
-          <li>No backend needed — it's a static site</li>
-          <li>Games open from the <code>Maths stuff</code> folder</li>
-          <li>Works on desktop and mobile</li>
-          <li>Sidebar category links filter games instantly</li>
-          <li>Each game loads in a full-screen iframe</li>
+          <li>No backend or build step is required</li>
+          <li>Games launch from the local <code>Maths stuff</code> folder</li>
+          <li>Favorites and recently played history stay in localStorage</li>
+          <li>The Games page supports search, category filters, and fullscreen play</li>
+          <li>The layout is designed to work on desktop and mobile</li>
         </ul>
       </section>
 
       <section class="about" style="margin-top: 1.5rem;">
         <div>
-          <p class="section-label">Bibliography</p>
-          <h2>Sources and Credits</h2>
+          <p class="section-label">Credits</p>
+          <h2>Sources and Notes</h2>
           <p>
-            This project uses various open-source libraries and assets.
+            The site is intentionally lightweight and mostly relies on browser APIs plus a small amount
+            of custom HTML, CSS, and JavaScript.
           </p>
           <ul class="about-list">
-            <li><strong>Fonts:</strong> Space Grotesk, Baloo 2 via Google Fonts</li>
-            <li><strong>Icons:</strong> Emoji-based icons</li>
-            <li><strong>Games:</strong> Thanks to gn-math and
-              <a href="https://docs.google.com/document/d/1BGDZ5sgwGTQIf8or47KonzbA6LwfiLvv3RkhElb0j3g/edit?tab=t.0" target="_blank">Unblocked Games Doc</a> for the games
-            </li>
+            <li><strong>Fonts:</strong> Space Grotesk, Orbitron, and Inter via Google Fonts</li>
+            <li><strong>Storage:</strong> localStorage for favorites, recents, theme, and particle settings</li>
+            <li><strong>UI:</strong> Custom client-side HTML, CSS, and JavaScript</li>
+            <li><strong>Games:</strong> Games from <a href="gn-math.dev" target="_blank">gn-math.dev</a> and <a href="https://docs.google.com/document/d/1BGDZ5sgwGTQIf8or47KonzbA6LwfiLvv3RkhElb0j3g/edit?tab=t.0" target="_blank">Unblocked Games Doc</a></li>
           </ul>
         </div>
         <div class="empty-state">
-          Additional references and documentation for the games can be found in their respective source folders within <code>Maths stuff</code>.
+          Yo, AI for the win? 😂. Blud I did nothing except a few things like the slang stuff. Also see <a href="">Suggestions form</a> for da suggestions.
         </div>
       </section>
     </div>
