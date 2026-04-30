@@ -5,6 +5,9 @@ const games = [
   { title: "Volley Random", category: "Sports", status: "Ready", description: "A volleyball spin on the random sports formula with quick back-and-forth rounds.", href: "Maths%20stuff/clvolleyrandom.html" },
   { title: "Snow Rider", category: "Sports", status: "Ready", description: "Downhill sledding with obstacle dodging, fast reactions, and endless runs.", href: "Maths%20stuff/clsnowrider.html" },
   { title: "Retro Bowl", category: "Sports", status: "Ready", description: "Old-school American football management and play-calling in a retro package.", href: "Maths%20stuff/Retro%20Bowl.html" },
+  { title: "Baseball Bros", category: "Sports", status: "Ready", description: "Arcade baseball with fast innings, simple controls, and plenty of chaos.", href: "Maths%20stuff/Baseball%20Bros.html" },
+  { title: "Basket Bros", category: "Sports", status: "Ready", description: "Two-player basketball action with exaggerated physics and quick matches.", href: "Maths%20stuff/Basket%20Bros.html" },
+  { title: "Football Bros", category: "Sports", status: "Ready", description: "Arcade football built around quick drives, big hits, and easy pick-up-and-play controls.", href: "Maths%20stuff/Football%20Bros.html" },
   { title: "Brotato", category: "Action", status: "Ready", description: "Arena survival action with swarms, upgrades, and constant movement.", href: "Maths%20stuff/Brotato.html" },
   { title: "Five Nights at Freddy's", category: "Action", status: "Ready", description: "The original survive-the-night horror game. Watch the cameras and manage the power.", href: "Maths%20stuff/clFNAF.html" },
   { title: "Five Nights at Freddy's 2", category: "Action", status: "Ready", description: "More animatronics, no doors, just a mask and a flashlight. Harder than the first.", href: "Maths%20stuff/Five%20Nights%20at%20Freddy's%202.html" },
@@ -12,8 +15,15 @@ const games = [
   { title: "Five Nights at Freddy's 4", category: "Action", status: "Ready", description: "No cameras — just doors, a flashlight, and sounds in the dark.", href: "Maths%20stuff/clFNAF4.html" },
   { title: "Five Nights at Epstein's", category: "Action", status: "Ready", description: "A fan-made FNAF-style horror game with a very different cast of characters.", href: "Maths%20stuff/Five%20Nights%20at%20Epstein's.html" },
   { title: "10 Minutes Till Dawn", category: "Action", status: "Ready", description: "A survival shooter focused on crowd control, dodging, and weapon upgrades.", href: "Maths%20stuff/cl10minutestildawn.html" },
+  { title: "Bad Time Simulator", category: "Action", status: "Ready", description: "A difficult boss-fight challenge built around dodging fast attack patterns.", href: "Maths%20stuff/Bad%20Time%20Simulator.html" },
+  { title: "People Playground", category: "Action", status: "Ready", description: "A sandbox game for experimenting with physics, tools, and chain reactions.", href: "Maths%20stuff/People%20Playground.html" },
   { title: "Hollow Knight", category: "Adventure", status: "Ready", description: "An exploration-heavy action adventure with platforming and combat.", href: "Maths%20stuff/Hollow%20Knight.html" },
+  { title: "AdVenture Capitalist", category: "Adventure", status: "Ready", description: "An idle clicker about building a business empire through nonstop upgrades.", href: "Maths%20stuff/Adventure%20Capatalist.html" },
+  { title: "OvO", category: "Adventure", status: "Ready", description: "A movement-focused platformer built around wall jumps, slides, and speed.", href: "Maths%20stuff/OvO.html" },
+  { title: "Slime Rancher", category: "Adventure", status: "Ready", description: "A colorful collecting adventure about rounding up slimes and exploring new areas.", href: "Maths%20stuff/Slime%20Rancher.html" },
+  { title: "Super Mario Bros", category: "Adventure", status: "Ready", description: "A classic side-scrolling platformer with tight jumps, enemies, and power-ups.", href: "Maths%20stuff/Super%20Mario%20Bros.html" },
   { title: "Slope", category: "Racing", status: "Ready", description: "Control a ball rolling down a steep slope at ever-increasing speed.", href: "Maths%20stuff/Slope.html" },
+  { title: "ULTRAKILL", category: "Shooter", status: "Ready", description: "A fast-paced retro shooter focused on movement, combos, and relentless aggression.", href: "Maths%20stuff/ULTRAKILL.html" },
 ];
 
 // ── Thumbnail generation ──
@@ -300,6 +310,8 @@ function applyURLFilter() {
 }
 
 if (hasGamePage) {
+  searchInput.placeholder = `Search ${games.length} games...`;
+
   // ── Sidebar category clicks ──
   document.querySelectorAll('.sidebar-nav').forEach(nav => {
     nav.addEventListener('click', e => {

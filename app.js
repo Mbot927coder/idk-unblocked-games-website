@@ -133,6 +133,14 @@ function getCategoryColor(category) {
     return map[category] || { color: 'var(--accent-cyan)', glow: 'rgba(0,255,198,0.15)' };
 }
 
+function formatCategorySummary(categories) {
+    if (categories.length === 0) return 'No categories yet.';
+    const labels = categories.map(cat => cat.toLowerCase());
+    if (labels.length === 1) return `${labels[0]} titles.`;
+    if (labels.length === 2) return `${labels[0]} and ${labels[1]} titles.`;
+    return `${labels.slice(0, -1).join(', ')}, and ${labels.at(-1)} titles.`;
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
     applySidebarSetting();
@@ -158,6 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 </a>
             `;
         }).join('');
+    }
+
+    const heroGameCount = document.getElementById('heroGameCount');
+    const heroCategorySummary = document.getElementById('heroCategorySummary');
+    if (typeof games !== 'undefined') {
+        const cats = [...new Set(games.map(g => g.category))].sort();
+        if (heroGameCount) {
+            heroGameCount.textContent = `${games.length} Games`;
+        }
+        if (heroCategorySummary) {
+            heroCategorySummary.textContent = formatCategorySummary(cats);
+        }
     }
 
     // Featured games
