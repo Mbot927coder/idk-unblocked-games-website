@@ -9,21 +9,41 @@ const games = [
   { title: "Basket Bros", category: "Sports", status: "Ready", description: "Two-player basketball action with exaggerated physics and quick matches.", href: "Maths%20stuff/Basket%20Bros.html" },
   { title: "Football Bros", category: "Sports", status: "Ready", description: "Arcade football built around quick drives, big hits, and easy pick-up-and-play controls.", href: "Maths%20stuff/Football%20Bros.html" },
   { title: "Brotato", category: "Action", status: "Ready", description: "Arena survival action with swarms, upgrades, and constant movement.", href: "Maths%20stuff/Brotato.html" },
+  { title: "Brotato Paws and Claws edition", category: "Action", status: "Ready", description: "A Brotato expansion-style survival run with more upgrades, enemies, and chaos.", href: "Maths%20stuff/brotatopaws%26claws.html" },
   { title: "Five Nights at Freddy's", category: "Action", status: "Ready", description: "The original survive-the-night horror game. Watch the cameras and manage the power.", href: "Maths%20stuff/clFNAF.html" },
   { title: "Five Nights at Freddy's 2", category: "Action", status: "Ready", description: "More animatronics, no doors, just a mask and a flashlight. Harder than the first.", href: "Maths%20stuff/Five%20Nights%20at%20Freddy's%202.html" },
   { title: "Five Nights at Freddy's 3", category: "Action", status: "Ready", description: "One animatronic, one vent system, and a lot of audio lures. Good luck.", href: "Maths%20stuff/clFNAF3.html" },
   { title: "Five Nights at Freddy's 4", category: "Action", status: "Ready", description: "No cameras — just doors, a flashlight, and sounds in the dark.", href: "Maths%20stuff/clFNAF4.html" },
   { title: "Five Nights at Epstein's", category: "Action", status: "Ready", description: "A fan-made FNAF-style horror game with a very different cast of characters.", href: "Maths%20stuff/Five%20Nights%20at%20Epstein's.html" },
+  { title: "Buckshot Roulette", category: "Shooter", status: "Ready", description: "A tense tabletop survival game built around risk, bluffing, and one very dangerous shotgun.", href: "Maths%20stuff/Buckshot%20Roulette.html" },
   { title: "10 Minutes Till Dawn", category: "Action", status: "Ready", description: "A survival shooter focused on crowd control, dodging, and weapon upgrades.", href: "Maths%20stuff/cl10minutestildawn.html" },
   { title: "Bad Time Simulator", category: "Action", status: "Ready", description: "A difficult boss-fight challenge built around dodging fast attack patterns.", href: "Maths%20stuff/Bad%20Time%20Simulator.html" },
   { title: "People Playground", category: "Action", status: "Ready", description: "A sandbox game for experimenting with physics, tools, and chain reactions.", href: "Maths%20stuff/People%20Playground.html" },
+  { title: "Bad Parenting 1", category: "Action", status: "Ready", description: "A short horror game with tense exploration and story-driven scares.", href: "Maths%20stuff/Bad%20Parenting%201.html" },
+  { title: "Gladihoppers", category: "Action", status: "Ready", description: "Arcade gladiator fights with floppy physics, weapons, and quick duels.", href: "Maths%20stuff/Gladihoppers.html" },
+  { title: "Clover Pit", category: "Puzzle", status: "Ready", description: "A luck-driven puzzle and strategy game with escalating choices and high-risk turns.", href: "Maths%20stuff/Clover%20Pit.html" },
+  { title: "2048", category: "Puzzle", status: "Ready", description: "Slide matching number tiles together and build up to the 2048 tile.", href: "Maths%20stuff/2048.html" },
+  { title: "State.io", category: "Puzzle", status: "Ready", description: "A territory strategy game about timing attacks and capturing every state on the map.", href: "Maths%20stuff/State.io.html" },
   { title: "Hollow Knight", category: "Adventure", status: "Ready", description: "An exploration-heavy action adventure with platforming and combat.", href: "Maths%20stuff/Hollow%20Knight.html" },
   { title: "AdVenture Capitalist", category: "Adventure", status: "Ready", description: "An idle clicker about building a business empire through nonstop upgrades.", href: "Maths%20stuff/Adventure%20Capatalist.html" },
+  { title: "Minecraft 1.12.2", category: "Adventure", status: "Ready", description: "Classic block-building survival and creative gameplay in the browser.", href: "Maths%20stuff/1dot12dot2.html" },
+  { title: "EaglercraftX 1.8", category: "Adventure", status: "Ready", description: "A browser version of Minecraft-style survival, building, and multiplayer exploration.", href: "Maths%20stuff/EaglercraftX_1dot8_Web.html" },
   { title: "OvO", category: "Adventure", status: "Ready", description: "A movement-focused platformer built around wall jumps, slides, and speed.", href: "Maths%20stuff/OvO.html" },
+  { title: "OvO 2", category: "Adventure", status: "Ready", description: "A follow-up movement platformer with more timing challenges, jumps, and speed routes.", href: "Maths%20stuff/OvO%202.html" },
+  { title: "OvO 3 Dimensions", category: "Adventure", status: "Ready", description: "A 3D take on OvO-style movement with obstacle courses and precision platforming.", href: "Maths%20stuff/OvO%203%20Dimensions.html" },
   { title: "Slime Rancher", category: "Adventure", status: "Ready", description: "A colorful collecting adventure about rounding up slimes and exploring new areas.", href: "Maths%20stuff/Slime%20Rancher.html" },
   { title: "Super Mario Bros", category: "Adventure", status: "Ready", description: "A classic side-scrolling platformer with tight jumps, enemies, and power-ups.", href: "Maths%20stuff/Super%20Mario%20Bros.html" },
+  { title: "Crossy Road", category: "Adventure", status: "Ready", description: "Hop through traffic, rivers, and moving hazards while chasing a higher score.", href: "Maths%20stuff/crossy.html" },
+  { title: "Schoolboy Runaway", category: "Adventure", status: "Ready", description: "A stealthy escape adventure about sneaking through rooms and avoiding capture.", href: "Maths%20stuff/Schoolboy%20Runaway.html" },
+  { title: "That's Not My Neighbor", category: "Puzzle", status: "Ready", description: "A deduction game about checking details, spotting impostors, and making the right call.", href: "Maths%20stuff/That's%20Not%20My%20Neighbor.html" },
+  { title: "Drift Boss", category: "Racing", status: "Ready", description: "A one-button drifting challenge where every turn tests timing and control.", href: "Maths%20stuff/cldriftboss.html" },
   { title: "Slope", category: "Racing", status: "Ready", description: "Control a ball rolling down a steep slope at ever-increasing speed.", href: "Maths%20stuff/Slope.html" },
   { title: "ULTRAKILL", category: "Shooter", status: "Ready", description: "A fast-paced retro shooter focused on movement, combos, and relentless aggression.", href: "Maths%20stuff/ULTRAKILL.html" },
+  { title: "1v1.LOL", category: "Shooter", status: "Ready", description: "A build-and-battle shooter focused on quick edits, aim, and one-on-one fights.", href: "Maths%20stuff/1.html" },
+  { title: "Bowmasters", category: "Shooter", status: "Ready", description: "Aim carefully, adjust power, and land trick shots in projectile duels.", href: "Maths%20stuff/Bowmasters.html" },
+  { title: "BuildNow GG", category: "Shooter", status: "Ready", description: "A fast building shooter with practice arenas, aiming, and quick construction fights.", href: "Maths%20stuff/BuildNow.gg.html" },
+  { title: "Slither.io", category: "Action", status: "Ready", description: "Grow a snake, cut off rivals, and survive as long as possible in an online arena.", href: "Maths%20stuff/Slither.io.html" },
+  { title: "Rocket Goal.io", category: "Puzzle", status: "Ready", description: "A physics-based goal-scoring game where you launch rockets to hit targets with precision and strategy.", href: "Maths%20stuff/Rocket%20Goal.io.html" },
 ];
 
 // ── Thumbnail generation ──
@@ -153,6 +173,12 @@ const searchInput    = document.getElementById('searchInput');
 const categoryFilter = document.getElementById('categoryFilter');
 const gamesGrid      = document.getElementById('gamesGrid');
 const resultsCount   = document.getElementById('resultsCount');
+const libraryTitle   = document.getElementById('libraryTitle');
+const gameCategoryHub  = document.getElementById('gameCategoryHub');
+const gameCategoryGrid = document.getElementById('gameCategoryGrid');
+const gameToolbar      = document.getElementById('gameToolbar');
+const sortBar          = document.getElementById('sortBar');
+const gameLibrary      = document.getElementById('gameLibrary');
 const gameView       = document.getElementById('gameView');
 const gameFrame      = document.getElementById('gameFrame');
 const gameTitle      = document.getElementById('gameTitle');
@@ -170,6 +196,80 @@ function fillCategoryOptions() {
     opt.textContent = cat;
     categoryFilter.append(opt);
   });
+}
+
+function getGameCategoryCounts() {
+  const counts = {};
+  games.forEach(g => { counts[g.category] = (counts[g.category] || 0) + 1; });
+  return counts;
+}
+
+function getCategoryCardStyle(category) {
+  const map = {
+    All:       { color: 'var(--accent-cyan)',   glow: 'rgba(0,255,198,0.15)' },
+    Action:    { color: 'var(--accent-orange)', glow: 'rgba(251,86,7,0.15)' },
+    Sports:    { color: 'var(--accent-cyan)',   glow: 'rgba(0,255,198,0.15)' },
+    Adventure: { color: 'var(--accent-purple)', glow: 'rgba(131,56,236,0.15)' },
+    Puzzle:    { color: 'var(--accent-yellow)', glow: 'rgba(255,190,11,0.15)' },
+    Racing:    { color: 'var(--accent-magenta)',glow: 'rgba(255,0,110,0.15)' },
+    Shooter:   { color: 'var(--accent-blue)',   glow: 'rgba(58,134,255,0.15)' },
+  };
+  return map[category] || map.All;
+}
+
+function renderCategoryHub() {
+  if (!gameCategoryGrid) return;
+  const counts = getGameCategoryCounts();
+  const categoryIcons = {
+    Action: '⚔️',
+    Sports: '🏆',
+    Adventure: '🗺️',
+    Puzzle: '🧩',
+    Racing: '🏎️',
+    Shooter: '🔫',
+  };
+  const categories = [...new Set(games.map(g => g.category))].sort();
+  const cards = [
+    {
+      title: 'All Games',
+      href: 'games.html?category=all',
+      icon: '🎮',
+      count: games.length,
+      description: 'Every game in the library',
+      style: getCategoryCardStyle('All'),
+    },
+    ...categories.map(cat => ({
+      title: cat,
+      href: `games.html?category=${encodeURIComponent(cat)}`,
+      icon: categoryIcons[cat] || '🎮',
+      count: counts[cat],
+      description: `${counts[cat]} game${counts[cat] === 1 ? '' : 's'}`,
+      style: getCategoryCardStyle(cat),
+    })),
+  ];
+
+  gameCategoryGrid.innerHTML = cards.map(card => `
+    <a class="category-card" href="${card.href}" style="--card-accent:${card.style.color};--card-glow:${card.style.glow}">
+      <div class="category-icon">${card.icon}</div>
+      <h3>${card.title}</h3>
+      <p>${card.description}</p>
+      <span class="category-count">${card.count}</span>
+    </a>
+  `).join('');
+}
+
+function showCategoryHub() {
+  if (gameCategoryHub) gameCategoryHub.style.display = '';
+  if (gameToolbar) gameToolbar.style.display = 'none';
+  if (sortBar) sortBar.style.display = 'none';
+  if (gameLibrary) gameLibrary.style.display = 'none';
+}
+
+function showGameLibrary() {
+  if (gameCategoryHub) gameCategoryHub.style.display = 'none';
+  if (gameToolbar) gameToolbar.style.display = '';
+  if (sortBar) sortBar.style.display = 'flex';
+  if (gameLibrary) gameLibrary.style.display = '';
 }
 
 // ── Filtering ──
@@ -288,11 +388,30 @@ async function exitFullscreen() {
 
 // ── URL-based category filter ──
 function applyURLFilter() {
-  const cat = new URLSearchParams(window.location.search).get('category');
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('category');
   const validCategories = new Set(games.map(g => g.category));
-  const activeCategory = cat && validCategories.has(cat) ? cat : 'all';
+  const isCategoryHub = !cat;
+  const activeCategory = cat === 'all' || (cat && validCategories.has(cat)) ? cat : 'all';
+
+  if (isCategoryHub) {
+    categoryFilter.value = 'all';
+    document.title = 'sharpness.math — Games';
+    renderCategoryHub();
+    showCategoryHub();
+    document.querySelectorAll('.sidebar-nav .nav-item').forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === 'games.html' && !link.dataset.filter);
+    });
+    return;
+  }
 
   categoryFilter.value = activeCategory;
+  if (libraryTitle) {
+    libraryTitle.textContent = activeCategory === 'all' ? 'All Games' : `${activeCategory} Games`;
+  }
+  document.title = activeCategory === 'all'
+    ? 'sharpness.math — All Games'
+    : `sharpness.math — ${activeCategory} Games`;
 
   if (activeCategory !== 'all') {
     document.querySelectorAll('.sidebar-nav .nav-item[data-filter]').forEach(link => {
@@ -306,6 +425,7 @@ function applyURLFilter() {
       link.classList.toggle('active', link.getAttribute('href') === 'games.html' && !link.dataset.filter);
     });
   }
+  showGameLibrary();
   renderGames();
 }
 
@@ -367,7 +487,16 @@ if (hasGamePage) {
   applyURLFilter();
 
   searchInput.addEventListener('input', renderGames);
-  categoryFilter.addEventListener('change', renderGames);
+  categoryFilter.addEventListener('change', () => {
+    const newUrl = new URL(window.location);
+    if (categoryFilter.value === 'all') {
+      newUrl.searchParams.set('category', 'all');
+    } else {
+      newUrl.searchParams.set('category', categoryFilter.value);
+    }
+    window.history.pushState({}, '', newUrl);
+    applyURLFilter();
+  });
   window.addEventListener('popstate', applyURLFilter);
   document.addEventListener('fullscreenchange', syncFullscreenButtons);
   syncFullscreenButtons();

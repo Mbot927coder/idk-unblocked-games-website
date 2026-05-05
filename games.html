@@ -25,7 +25,7 @@
                 <span class="icon">🏠</span> Home
             </a>
             <a class="nav-item active" href="games.html">
-                <span class="icon">🎮</span> Browse Games
+                <span class="icon">🎮</span> Games
             </a>
             <a class="nav-item" href="about.html">
                 <span class="icon">ℹ️</span> About
@@ -39,6 +39,9 @@
             </a>
             <a class="nav-item" href="games.html?category=Adventure" data-filter="Adventure">
                 <span class="class-dot dot-adventure"></span> Adventure
+            </a>
+            <a class="nav-item" href="games.html?category=Puzzle" data-filter="Puzzle">
+                <span class="class-dot dot-puzzle"></span> Puzzle
             </a>
             <a class="nav-item" href="games.html?category=Racing" data-filter="Racing">
                 <span class="class-dot dot-racing"></span> Racing
@@ -80,8 +83,21 @@
                 <iframe id="gameFrame" allowfullscreen></iframe>
             </div>
 
+            <!-- Category hub -->
+            <section class="category-section" id="gameCategoryHub">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="section-label">Browse</p>
+                        <h2>Games</h2>
+                    </div>
+                </div>
+                <div class="category-grid" id="gameCategoryGrid">
+                    <!-- Populated by games.js -->
+                </div>
+            </section>
+
             <!-- Search toolbar -->
-            <section class="toolbar">
+            <section class="toolbar" id="gameToolbar">
                 <div class="toolbar-copy">
                     <p class="section-label">Find Games</p>
                     <h2>Search & Filter</h2>
@@ -95,14 +111,14 @@
                     <label class="control">
                         <span>📂 Category</span>
                         <select id="categoryFilter">
-                            <option value="all">All categories</option>
+                            <option value="all">All games</option>
                         </select>
                     </label>
                 </div>
             </section>
 
             <!-- Sort bar -->
-            <div class="sort-bar" style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+            <div class="sort-bar" id="sortBar" style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
                 <span style="color:var(--text-muted);font-size:0.8rem;font-weight:600;">Sort:</span>
                 <button class="sort-btn active" data-sort="default">Default</button>
                 <button class="sort-btn" data-sort="az">A → Z</button>
@@ -111,11 +127,11 @@
             </div>
 
             <!-- Games grid -->
-            <section class="math-section">
+            <section class="math-section" id="gameLibrary">
                 <div class="section-heading">
                     <div>
                         <p class="section-label">Library</p>
-                        <h2>All Games</h2>
+                        <h2 id="libraryTitle">All Games</h2>
                     </div>
                     <p class="results-count" id="resultsCount">Loading...</p>
                 </div>
