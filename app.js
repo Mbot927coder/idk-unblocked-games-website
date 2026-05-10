@@ -141,6 +141,14 @@ function formatCategorySummary(categories) {
     return `${labels.slice(0, -1).join(', ')}, and ${labels.at(-1)} titles.`;
 }
 
+function formatCategoryList(categories) {
+    const labels = categories.map(cat => cat.toLowerCase());
+    if (labels.length === 0) return 'no categories';
+    if (labels.length === 1) return labels[0];
+    if (labels.length === 2) return `${labels[0]} and ${labels[1]}`;
+    return `${labels.slice(0, -1).join(', ')}, and ${labels.at(-1)}`;
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
     applySidebarSetting();
@@ -177,6 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (heroCategorySummary) {
             heroCategorySummary.textContent = formatCategorySummary(cats);
+        }
+
+        const aboutGameCount = document.getElementById('aboutGameCount');
+        const aboutCategorySummary = document.getElementById('aboutCategorySummary');
+        if (aboutGameCount) {
+            aboutGameCount.textContent = games.length;
+        }
+        if (aboutCategorySummary) {
+            aboutCategorySummary.textContent = formatCategoryList(cats);
         }
     }
 
